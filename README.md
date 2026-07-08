@@ -1,42 +1,17 @@
-# Flask + Redis Visit Counter 🐳
+# flask-redis-docker
 
-A multi-container web application built with Docker Compose.
-Tracks page visits using Redis as a persistent data store.
+Two containers running together via Docker Compose. Flask counts page visits, Redis stores the number persistently across restarts.
 
-## 🏗️ Architecture
-Browser → Flask (port 5001) → Redis (port 6379)
-
-## 🛠️ Tech Stack
-
-- **Python / Flask** — web server
-- **Redis** — in-memory data store
-- **Docker Compose** — container orchestration
-- **Docker Volumes** — persistent data storage
-
-## 🚀 Quick Start
+## Run
 
 ```bash
-git clone https://github.com/boozer23/my_devops_journey.git
-cd my_devops_journey/projects/flask_redis
+git clone https://github.com/boozer23/flask-redis-docker.git
+cd flask-redis-docker
 docker compose up --build
 ```
 
 Open http://localhost:5001
 
-## 📁 Project Structure
-flask_redis/
+## Stack
 
-├── app.py              # Flask application
-
-├── requirements.txt    # Python dependencies
-
-├── Dockerfile          # Container build instructions
-
-└── docker-compose.yml  # Multi-container orchestration
-
-## 💡 What I learned
-
-- Docker Compose for multi-container apps
-- Container networking (services communicate by name)
-- Persistent storage with Docker Volumes
-- Environment separation between services
+Python, Flask, Redis, Docker Compose, Docker Volumes
